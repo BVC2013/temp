@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Answer</title>
+</head>
+<body>
+    <h1>Question about {{ topic_name }}</h1>
+    <p>Question: {{ question }}</p>
+    <p>{{ answer }}</p>
+    <a href="{{ url_for('topic', topic_name=topic_name) }}">Back to {{ topic_name }}</a>
+</body>
+</html>
