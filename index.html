@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Tutor</title>
+</head>
+<body>
+    <h1>Welcome to the AI Tutor Program!</h1>
+    <h2>Available Topics:</h2>
+    <ul>
+        {% for topic, description in topics.items() %}
+        <li><a href="{{ url_for('topic', topic_name=topic) }}">{{ topic }}</a>: {{ description }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
