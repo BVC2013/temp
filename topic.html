@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ topic_name }}</title>
+</head>
+<body>
+    <h1>{{ topic_name }}</h1>
+    <p>{{ content }}</p>
+    {% if api_data %}
+        <h3>Additional Information:</h3>
+        <pre>{{ api_data }}</pre>
+    {% endif %}
+    <form action="{{ url_for('ask_question') }}" method="post">
+        <input type="hidden" name="topic_name" value="{{ topic_name }}">
+        <label for="question">Your Question:</label>
+        <input type="text" name="question" id="question" required>
+        <button type="submit">Ask</button>
+    </form>
+    <a href="{{ url_for('home') }}">Back to Topics</a>
+</body>
+</html>
